@@ -77,8 +77,6 @@ function App() {
   return (
     <div className="container">
       <div className="avatar-wrapper">
-        <div className="avatar-glow" />
-        <div className="avatar-ring" />
         <div className="avatar">
           <img src={profilePic} alt="Professor KPOP" />
         </div>
