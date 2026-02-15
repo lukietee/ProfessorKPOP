@@ -1,4 +1,6 @@
-# STIMULA (Professor KPOP)
+## STIMULA (Professor KPOP)
+
+# (VIDEO CREATION PIPLINE REDACTED)
 
 Turn plain text into short-form educational videos automatically.
 
