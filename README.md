@@ -1,4 +1,4 @@
-# STIMULA
+# STIMULA (Professor KPOP)
 
 Turn plain text into short-form educational videos automatically.
 
