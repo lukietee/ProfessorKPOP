@@ -65,13 +65,11 @@
   background-clip: text;
 }
 
-.tagline {
-  font-size: 0.85rem;
+.handle {
+  font-size: 0.9rem;
   font-weight: 300;
   color: rgba(255, 255, 255, 0.4);
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  margin-bottom: 2.5rem;
+  margin-bottom: 2rem;
 }
 
 /* Cards */

@@ -85,7 +85,7 @@ function App() {
       </div>
 
       <h1 className="name">Professor KPOP</h1>
-      <p className="tagline">Content Creator</p>
+      <p className="handle">@professor.kpop</p>
 
       <div className="cards">
         <SocialCard
