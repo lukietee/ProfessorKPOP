@@ -1,73 +1,75 @@
-# React + TypeScript + Vite
+# STIMULA
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Turn plain text into short-form educational videos automatically.
 
-Currently, two official plugins are available:
+STIMULA generates a full video from a single prompt. The system writes a script, generates dialogue using AI voice models, adds captions, overlays characters, inserts background footage, and renders a finished vertical video ready for social media.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Built in 48 hours at a hackathon.
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Overview
 
-## Expanding the ESLint configuration
+STIMULA is an automated educational video generator designed for short-form content platforms.  
+Users provide a topic, and the system produces a complete conversation-style video between characters.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+The pipeline:
+1. Prompt → AI script
+2. Script → AI voices
+3. Voices → captions
+4. Media assets → assembled video
+5. Render → exportable short-form video
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+No manual editing required.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## Tech Stack
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Frontend
+- React.js
+- HTML / CSS
+- Figma (UI design)
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Backend
+- Python
+- FastAPI
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### AI + Media Processing
+- OpenAI API — script generation
+- ElevenLabs Multilingual v2 — voice synthesis
+- OpenAI Whisper — caption transcription
+- MoviePy — video rendering
+- FFMPEG — final video stitching
+
+---
+
+## Voice Models
+
+We trained 24 custom voice models using over 4+ hours of collected voice lines.
+
+Examples include:
+- KIM CHAEWON
+- CAILLOU
+- PETER GRIFFIN
+
+The voices are used to simulate a conversation format that keeps viewer retention high for short-form content.
+
+---
+
+## How It Works
+
+1. User enters a topic
+2. OpenAI generates a conversation script
+3. Dialogue lines are assigned to AI characters
+4. ElevenLabs generates speech for each line
+5. Whisper generates captions
+6. MoviePy combines:
+   - background footage
+   - speaker PNGs
+   - captions
+   - music
+   - audio dialogue
+7. FFMPEG exports the final video
+
+---
