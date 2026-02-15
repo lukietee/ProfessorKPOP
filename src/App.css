@@ -39,7 +39,7 @@
 .handle {
   font-size: 0.9rem;
   font-weight: 300;
-  color: rgba(0, 0, 0, 0.4);
+  color: #000;
   margin-bottom: 2rem;
 }
 
@@ -56,7 +56,7 @@
   align-items: center;
   gap: 1rem;
   background: rgba(0, 0, 0, 0.02);
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  border: 2px solid #000;
   border-radius: 16px;
   padding: 1.25rem 1.75rem;
   text-decoration: none;
@@ -118,7 +118,7 @@
 .card-label {
   font-size: 0.75rem;
   font-weight: 300;
-  color: rgba(0, 0, 0, 0.4);
+  color: #000;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
